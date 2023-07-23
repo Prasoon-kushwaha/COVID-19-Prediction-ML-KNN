@@ -28,7 +28,7 @@ def main():
                [37.1, 1, 4, 3, 1, 'highrisk'], [36.5, 0, 3, 2, 1, 'highrisk'], [37.3, 1, 1, 2, 1, 'moderate'],
                [37.0, 0, 0, 1, 1, 'lowrisk'], [36.4, 1, 0, 1, 0, 'lowrisk'], [37.6, 1, 3, 3, 0, 'highrisk'],
                [37.2, 0, 1, 0, 0, 'moderate'], [37.2, 0, 1, 0, 0, 'moderate'], [36.5, 0, 0, 1, 1, 'lowrisk'],
-               [36.9, 1, 0, 0, 0, 'lowrisk'], [36.7, 0, 5, 1, 0, 'moderate'], [36.9, 1, 0, 0, 0, 'lowrisk'],
+               [36.9, 1, 0, 0, 0, 'lowrisk'], [36.7, 0, 5, 1, 0, 'moderate'], [35.9, 1, 0, 0, 0, 'lowrisk'],
                [37.0, 1, 2, 0, 1, 'moderate'], [36.5, 0, 0, 1, 0, 'lowrisk'], [36.7, 1, 5, 6, 0, 'highrisk'],
                [37.1, 0, 2, 1, 1, 'moderate'], [36.39, 1, 1, 1, 0, 'moderate'], [37.2, 0, 0, 0, 1, 'lowrisk'],
                [37.3, 0, 2, 1, 0, 'moderate'], [37.5, 0, 1, 2, 0, 'moderate'], [36.8, 1, 0, 2, 0, 'lowrisk'],
@@ -36,7 +36,7 @@ def main():
  
 
     while True:
-        bodytemp = get_input('Enter the temperature of your body 🌡  ')
+        bodytemp = float(input('Enter the temperature of your body 🌡  '))
         if not (35 <= bodytemp <= 42.5):
             print('Invalid temperature. Please enter a valid body temperature (35°C to 42.5°C).')
             continue
