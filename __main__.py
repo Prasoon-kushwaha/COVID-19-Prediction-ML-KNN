@@ -76,7 +76,7 @@ dataset = [
 
 # Create the main Tkinter window
 root = tk.Tk()
-root.title("K-Nearest Neighbor Risk Assessment")
+root.title("K-Nearest Neighbor Based Covid-19 Predictor")
 root.configure(bg="#f0f8ff")
 
 # Input Fields

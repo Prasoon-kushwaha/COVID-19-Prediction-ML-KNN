@@ -1,13 +1,61 @@
 # COVID-19-Prediction-ML-KNN
-##  What is KNN ?
-KNN (k-nearest neighbors) algorithm is a supervised machine learning algorithm used for classification and regression tasks. 
-It is a non-parametric algorithm, which means that it does not make any assumptions about the underlying data distribution.
 
-# what's in code
-In this code we have dataset which have riskfactor included with symtom of covid-19
-we are asking user to input data and from that data we are calculating the Euclidean distance from dataset ,
-the closed 7 case is then used to predict the chance of risk.
+This project implements a K-Nearest Neighbors (KNN) model to assess the risk of a user's health condition based on various input parameters like body temperature, symptoms, and recent interactions. The application provides a simple GUI built using Python's `tkinter` library.
 
-# O
+## Features
+- **User-Friendly Interface**: Simple GUI for data input and result display.
+- **Risk Assessment**: Calculates the risk level (Low, Moderate, or High) based on the KNN algorithm.
+- **Real-Time Feedback**: Provides a risk level and actionable advice based on user input.
+- **Dataset Flexibility**: Predefined dataset for KNN model that can be easily extended.
 
-This algorithm is easy to understand but is computationaly expensive hence, this algo should be avoided in large dataset
+## Dataset
+
+The dataset used in this project is predefined and contains the following features:
+- **Body Temperature** (°C)
+- **International Visit** (Yes/No)
+- **Number of Severe Symptoms** (0-5)
+- **Number of Common Symptoms** (0-5)
+- **Interaction with COVID-Positive Person** (Yes/No)
+- **Risk Level** (Low, Moderate, High)
+
+The dataset is used to calculate the Euclidean distance between user inputs and predefined data points to predict the risk level.
+
+## Example Dataset
+
+```python
+dataset = [
+    [37.0, 1, 4, 3, 0, 'highrisk'], [36.5, 0, 2, 2, 0, 'highrisk'],
+    [36.5, 0, 0, 1, 1, 'lowrisk'], [37.2, 1, 2, 2, 0, 'moderate'],
+    [36.8, 1, 5, 3, 1, 'highrisk'], [37.5, 0, 0, 0, 0, 'lowrisk'],
+    [36.91, 1, 1, 0, 1, 'moderate'], [37.3, 0, 5, 3, 1, 'highrisk'],
+    [36.3, 0, 2, 1, 1, 'lowrisk'], [37.1, 1, 4, 3, 1, 'highrisk'],
+    # Additional dataset entries...
+]
+```
+## How to Use
+
+1. **Run the Application**:
+   - Launch the Python script using a Python IDE or terminal.
+
+2. **Input Data**:
+   - Enter your **Body Temperature (°C)** in the text box.
+   - Select **Yes** or **No** for **International Visit** and **Interaction with COVID+ Patient**.
+   - Use the sliders to indicate:
+     - Number of **Severe Symptoms** (0-5).
+     - Number of **Common Symptoms** (0-5).
+
+3. **View Risk Assessment**:
+   - Click the **Submit** button.
+   - The application will display your **Risk Level** along with advice.
+
+4. **Understand the Output**:
+   - **Low Risk**: Stay at home. 🏠
+   - **Moderate Risk**: Visit a doctor for a checkup. 🏥
+   - **High Risk**: Urgent medical attention required. 🚨
+
+### Images
+
+#### Use Case
+![Home Screen](img/High.png)
+
+
